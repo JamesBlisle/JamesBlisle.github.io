@@ -3,14 +3,56 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+h1 {
+  display: flex;
+  font-size: 100px;
+  align-self: center;
+  justify-content: center;
+  grid-area: h1;
+  color: rgb(30, 255, 0);
+}
+h1 > #h1e {
+  color: red;
+}
+/*
+Modification de l'image afin que le border(les côtés) soit ronde */
+#pfp { 
+border-radius: 50px;
+}
+article {
+  display: grid;
+  grid-area: score;
+  border: 8px double rgb(0, 255, 136);
+  background-color: rgb(145, 0, 73);
+}
+article > #meilleurScore {
+  border: 8px groove rgb(255, 217, 0);
+  color: gold;
+  margin: 5px;
+}
+article > #scoreActuel {
+  border:8px groove silver;
+  color: silver;
+  margin: 5px;
+}
+#profil {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#profil:hover {
+  cursor: pointer;
+}
 body {
   height: 100vh;
   display: flex;
   background: #060AB2;
 }
-
+div > h3 {
+  grid-area: h3;
+}
 .memory-game {
+  grid-area: jeu;
   width: 640px;
   height: 640px;
   margin: auto;
@@ -18,7 +60,13 @@ body {
   flex-wrap: wrap;
   perspective: 1000px;
 }
-
+article > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px, auto;
+  grid-template-areas: "h3"
+  "h1";
+}
 .memory-card {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
@@ -38,7 +86,15 @@ body {
 .memory-card.flip {
   transform: rotateY(180deg);
 }
-
+body {
+  display: grid;
+  background-color: rgb(0, 109, 103);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6fr, 3fr;
+  grid-template-areas:
+  ". jeu score"
+  "footer footer footer";
+}
 .front-face,
 .back-face {
   width: 100%;
@@ -49,7 +105,12 @@ body {
   background: #1C7CCC;
   backface-visibility: hidden;
 }
-
+footer {
+  display: grid;
+  grid-area: footer;
+  background-color: antiquewhite;
+  grid-template-columns: repeat(3, 1fr);
+}
 .front-face {
   transform: rotateY(180deg);
 }

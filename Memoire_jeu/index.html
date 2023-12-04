@@ -3,67 +3,85 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Memory Game</title>
+  <title>Jeu de memoire</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <section class="memory-game">
     <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/yuta.jpg" alt="Yuta" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="aurelia">
-      <img class="front-face" src="../img/aurelia.svg" alt="Aurelia" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/yuta.jpg" alt="Yuta" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
 
     <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/gojo.jpg" alt="Gojo" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="vue">
-      <img class="front-face" src="../img/vue.svg" alt="Vue" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/gojo.jpg" alt="Gojo" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
 
     <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/benimaru.jpg" alt="Benimaru" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="angular">
-      <img class="front-face" src="../img/angular.svg" alt="Angular" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/benimaru.jpg" alt="Benimaru" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
 
     <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/joker.jpg" alt="Joker" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="ember">
-      <img class="front-face" src="../img/ember.svg" alt="Ember" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/joker.jpg" alt="Joker" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
 
     <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/kaneki.jpg" alt="Kaneki" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="backbone">
-      <img class="front-face" src="../img/backbone.svg" alt="Backbone" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/kaneki.jpg" alt="Kaneki" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
 
     <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/shinra.jpg" alt="Shinra" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
     <div class="memory-card" data-framework="react">
-      <img class="front-face" src="../img/react.svg" alt="React" />
-      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+      <img class="front-face" src="nouv_img/shinra.jpg" alt="Shinra" />
+      <img class="back-face" src="nouv_img/explosion.jpg" alt="Explosion" />
     </div>
   </section>
-
+  <article>
+    <div id="meilleurScore"><h3 id="Score">Nombre de paires trouvées:</h3><h1 id="h1p"></h1></div>
+    <div id="scoreActuel"><h3 id="EScore">Nombre d'essais: </h3><h1 id="h1e"></h1></div>
+  </article>
+<footer>
+  <div id="Remerciements">
+    <h3>Inspiration du projet:</h3>
+    <h3><a href="https://github.com/code-sketch/memory-game" target="_blank">https://github.com/code-sketch/memory-game</a></h3>
+  </div>
+  <div id="Presentation">
+    <h3>James Bélisle</h3>
+    <h3>Design Web A2023</h3>
+  </div>
+  
+  <div id="profil">
+    
+    <img src="nouv_img/pfp.jpg" alt="Mon profil anime" id="pfp" width="75px" onclick="window.open('mailto:2352100@carrefour.cegepvicto.com')">
+  </div>
+</footer>
   <script src="scripts.js"></script>
 </body>
 </html>
