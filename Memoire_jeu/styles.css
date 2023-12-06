@@ -11,13 +11,59 @@ h1 {
   grid-area: h1;
   color: rgb(30, 255, 0);
 }
-h1 > #h1e {
-  color: red;
+aside {
+  display: grid;
+  grid-area: aside;
+  grid-template-columns: auto;
+  grid-template-rows: 30px 125px 125px 125px 125px 125px 125px;
+  grid-template-areas: 
+  "capteur"
+  "shinra"
+  "gojo"
+  "joker"
+  "beni"
+  "kaneki"
+  "yuta";
+  background-color: rgb(0, 50, 94);
+  border-right: 5px dashed rgb(109, 0, 0);
+}
+aside > #captetrouvee {
+  grid-area: capteur;
+}
+div > #gojocomplet {
+  grid-area: gojo;
+  
+}
+div > #shinracomplet {
+  grid-area: shinra;
+  
+}
+div > #jokercomplet {
+  grid-area: joker;
+  
+}
+div > #benimarucomplet {
+  grid-area: beni;
+  
+}
+div > #kanekicomplet {
+  grid-area: kaneki;
+  
+}
+div > #yutacomplet {
+  grid-area: yuta;
+  
+}
+#h1e {
+  color: rgb(25, 0, 255);
 }
 /*
 Modification de l'image afin que le border(les côtés) soit ronde */
 #pfp { 
 border-radius: 50px;
+}
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 article {
   display: grid;
@@ -42,6 +88,9 @@ article > #scoreActuel {
 }
 #profil:hover {
   cursor: pointer;
+}
+.cache {
+  visibility: hidden;
 }
 body {
   height: 100vh;
@@ -75,7 +124,6 @@ article > div {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
 .memory-card:active {
@@ -92,7 +140,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 6fr, 3fr;
   grid-template-areas:
-  ". jeu score"
+  "aside jeu score"
   "footer footer footer";
 }
 .front-face,

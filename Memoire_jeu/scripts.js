@@ -4,10 +4,17 @@ var comptEE= 0;
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-
-
+let verifshinra = document.getElementById("shinracomplet");
+let verifgojo = document.getElementById("gojocomplet");
+let verifjoker = document.getElementById("jokercomplet");
+let verifbeni = document.getElementById("benimarucomplet");
+let verifkaneki = document.getElementById("kanekicomplet");
+let verifyuta = document.getElementById("yutacomplet");
+var bravo = new Audio('nouv_img/adolla.mp3');
+var felicitation = new Audio('origin_img/crimson.mp3');
+var wow = new Audio('nouv_img/hollowpurple.mp3');
 let mscore = document.getElementById("Score");
-let essais = document.getElementById("EScore")
+let essais = document.getElementById("EScore");
 
 function flipCard() {
   if (lockBoard) return;
@@ -30,28 +37,65 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework; //Le framework, c'est l'image sur la carte. On l'utilise pour comparer les images.
   isMatch ? disableCards() : unflipCards(); //if (égale à l'autre), paralyse les cartes :(sinon), retourne les cartes pour voir leur dos
   if(isMatch == true) {
     compte++; //Si ce sont les mêmes cartes, le compte de paires est augmenté et on change le score pour ajouter le compte
-    let containscore = document.getElementById("meilleurScore");
     let paires = document.getElementById("h1p");
     paires.innerHTML = compte + " / 6";
     if (compte == 6) {
-      let rotation = [{transform:"rotate(3600deg)"}];
-      paires.animate(rotation, 5000);
+      let victoire = [{transform:"rotate(3600deg)"}];
+      paires.animate(victoire, 5000);
+      verifbeni.animate(victoire, 5000);
+      verifshinra.animate(victoire, 5000);
+      verifgojo.animate(victoire, 5000);
+      verifjoker.animate(victoire, 5000);
+      verifkaneki.animate(victoire, 5000);
+      verifyuta.animate(victoire, 5000);
+      
     }
+    
   }
   else {
     comptEE++;
     let containessais = document.getElementById("scoreActuel");
     let essais = document.getElementById("h1e");
     essais.innerHTML = comptEE;
+    let recommence = [{transform:"translateY(50px)"}];
+    essais.animate(recommence, 750);
   }
 }
 
 function disableCards() {
-  firstCard.removeEventListener('click', flipCard); //Met les cartes hors d'état de nuire, les désactive.
+  for (let i = 0; i < 6; i++) {
+    if (firstCard.dataset.framework == verifbeni.dataset.framework) {
+      verifbeni.classList.remove("cache");
+      
+      felicitation.play();
+    }
+    else if (firstCard.dataset.framework == verifgojo.dataset.framework) {
+      verifgojo.classList.remove("cache");
+      wow.play();
+    }
+    else if (firstCard.dataset.framework == verifkaneki.dataset.framework) {
+      verifkaneki.classList.remove("cache");
+      bravo.play();
+    }
+    else if (firstCard.dataset.framework == verifyuta.dataset.framework) {
+      verifyuta.classList.remove("cache");
+      bravo.play();
+    }
+    else if (firstCard.dataset.framework == verifshinra.dataset.framework) {
+      verifshinra.classList.remove("cache");
+      bravo.play();
+    }
+    else if (firstCard.dataset.framework == verifjoker.dataset.framework) {
+      verifjoker.classList.remove("cache");
+      bravo.play();
+    }
+  }
+  
+  firstCard.removeEventListener('click', flipCard); //Met les cartes hors d'état de nuire, désactive la réponse au clic sur la carte.
   secondCard.removeEventListener('click', flipCard);
   resetBoard();
   
