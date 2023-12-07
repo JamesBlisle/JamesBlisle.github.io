@@ -13,6 +13,9 @@ let verifyuta = document.getElementById("yutacomplet");
 var bravo = new Audio('nouv_img/adolla.mp3');
 var felicitation = new Audio('origin_img/crimson.mp3');
 var wow = new Audio('nouv_img/hollowpurple.mp3');
+var waouh = new Audio('yutasound (1).mp3');
+var jokerson = new Audio('nouv_img/jokesong.mp3');
+var kansong = new Audio('kanekisong (1).mp3');
 let mscore = document.getElementById("Score");
 let essais = document.getElementById("EScore");
 
@@ -46,12 +49,12 @@ function checkForMatch() {
     if (compte == 6) {
       let victoire = [{transform:"rotate(3600deg)"}];
       paires.animate(victoire, 5000);
-      verifbeni.animate(victoire, 5000);
-      verifshinra.animate(victoire, 5000);
-      verifgojo.animate(victoire, 5000);
-      verifjoker.animate(victoire, 5000);
-      verifkaneki.animate(victoire, 5000);
-      verifyuta.animate(victoire, 5000);
+      verifbeni.animate(victoire, 7000);
+      verifshinra.animate(victoire, 5500);
+      verifgojo.animate(victoire, 6000);
+      verifjoker.animate(victoire, 6500);
+      verifkaneki.animate(victoire, 7500);
+      verifyuta.animate(victoire, 8000);
       
     }
     
@@ -79,11 +82,11 @@ function disableCards() {
     }
     else if (firstCard.dataset.framework == verifkaneki.dataset.framework) {
       verifkaneki.classList.remove("cache");
-      bravo.play();
+      kansong.play();
     }
     else if (firstCard.dataset.framework == verifyuta.dataset.framework) {
       verifyuta.classList.remove("cache");
-      bravo.play();
+      waouh.play();
     }
     else if (firstCard.dataset.framework == verifshinra.dataset.framework) {
       verifshinra.classList.remove("cache");
@@ -91,7 +94,7 @@ function disableCards() {
     }
     else if (firstCard.dataset.framework == verifjoker.dataset.framework) {
       verifjoker.classList.remove("cache");
-      bravo.play();
+      jokerson.play();
     }
   }
   
